@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/Mão Branca com sombra.png"/>
+    <title>JKI SUCATAS</title>
+</head>
+
+<body><style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
+* {
+    margin: 0;
+
+
+}
+
+
+.html {
+    background-color: #d3d3d3;
+}
+
+.container-input {
+    position: relative;
+}
+
+.input {
+    width: 150px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 9999px;
+    border: solid 1px #ffffff;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    outline: none;
+    opacity: 0.8;
+}
+
+.container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+.input:focus {
+    opacity: 1;
+    width: 250px;
+}
+
+.logo-jki {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nome-empresa {
+    width: 40%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.menu {
+    height: 130px;
+    background-color: #252323;
+    box-shadow: 0px 3px 10px #464646;
+    font-family: 'inter', sans-serif;
+}
+
+
+.redes-sociais ul li {
+    margin-left: 15px;
+    display: inline-block;
+    list-style: none;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nome-empresa {
+
+    font-family: sans-serif;
+    color: aliceblue;
+}
+
+.nav-list {
+    padding: 0, 5rem;
+    height: 50px;
+    background-color: #229b58;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-items: center;
+    list-style: none;
+}
+
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+
+
+
+
+
+.slider {
+
+    margin: 0 auto;
+    width: 650px;
+    height: 300px;
+    overflow: hidden;
+    background-color: slategray;
+}
+
+.slides {
+
+    width: 400%;
+    height: 300px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+
+}
+
+.slide {
+
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    width: 100%;
+    height: 300px;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 650px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.manual-btn {
+
+    border: 2px solid #4e4c4c;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    background-color: transparent;
+
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: #fdfdfd;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -25%;
+}
+
+#radio3:checked~.first {
+
+    margin-left: -50%;
+}
+
+#radio4:checked~.first {
+
+    margin-left: -75%;
+}
+
+.navigation-auto div {
+
+    margin-right: 150px;
+    border: 2px solid #2b2b2b;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 800px;
+    margin-top: 260px;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background-color: rgb(255, 255, 255);
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background-color: rgb(255, 255, 255);
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background-color: rgb(255, 255, 255);
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background-color: rgb(255, 255, 255);
+}
+
+button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: #18a36b;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+.botao-login {
+    display: flex;
+    margin-left: 650px;
+    color: #000;
+}
+
+.nav-footer-navigation__menu {
+    height: 500px;
+    list-style: none;
+    justify-content: space-between;
+    display: flex;
+    align-items: end;
+    width: 500px;
+    background-color: #ffffff;
+}
+
+.nav-footer-secondaryinfo {
+    text-align: center;
+    color:#000
+
+   
+}
+
+.container {
+
+    display: flex;
+    background-color: #fffafa;
+    justify-content: space-around;
+}
+
+.img-1 {
+    width: 300px;
+    height: 200px;
+}
+
+.img-2 {
+    width: 300px;
+    height: 200px;
+}
+
+.img-3 {
+    width: 300px;
+    height: 200px;
+}
+
+
+.img-4 {
+    width: 300px;
+    height: 200px;
+}
+
+.mapa {
+    text-align: center;
+}
+
+.endereço {
+    text-align: center;
+}
+
+.rodapé {
+    padding: 0, 5rem;
+    height: 50px;
+    background-color: #229b58;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.missao {
+    text-align: center;
+}
+
+.redes-sociais{
+    text-align: center;
+    
+}
+
+.rodapé {
+    position: absolute;
+    bottom:0;
+  width: 100%;
+}</style>
+    <header class="menu">
+
+
+        <div class="cabeça">
+
+            <div class="logo-jki">
+                <a href="index.html"><img src="./img/Mão Branca com sombra.png" width="100px"></a>
+                <h1 class="nome-empresa"><em><a href="index.html" style="text-decoration: none; color: white;"> JKI SUCATAS</a></em></h1>
+                <div class="container-input">
+                    <input type="text" placeholder="Search" name="text" class="input">
+                    <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+                <button class="botao-login"><a href="http://localhost/cadastro1/addtbc.php" style="text-decoration: none; color: black;">Login</a>
+                </button>
+            </div>
+
+
+        </div>
+
+
+        <div class="nav-list">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="http://localhost/cadastro1/addtbc.php" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="localização.html" class="nav-link">
+                        Localização</a>
+                </li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link"> Sobre</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </header> <br><br>
+    <main class="main
+    ">
+        <div class="slider">
+            <div class="slides">
+                <!--Radio Buttons-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <!--Fim Buttons-->
+
+                <!--Slide Imagem-->
+                <div class="slide first">
+                    <a href="https://wa.me/5511941975502?text=Ola+vim+da+Pagina+JKI+SUCATAS+quero+agendar+um+frete+Caminhao+carroceria "><img src="./img/caçamba-roll-on-JKI.jpg" alt="Imagem 1"></a>
+                </div>
+                <div class="slide">
+                    <a href="https://wa.me/5511941975502?text=Ola+vim+da+Pagina+JKI+SUCATAS+quero+agendar+um+frete+Caminhao+Roll+On"><img src="./img/caçamba-poli.png" alt="Imagem 2"></a>
+                </div>
+                <div class="slide">
+                    <a href="https://wa.me/5511941975502?text=Ola+vim+da+Pagina+JKI+SUCATAS+quero+agendar+uma+caçamba+Poli "><img src="./img/Caminhao-roll-on.jpg" alt="Imagem 3"></a>
+                </div>
+                <div class="slide">
+                    <a href="https://wa.me/5511941975502?text=Ola+vim+da+Pagina+JKI+SUCATAS+quero+agendar+uma+caçamba+Roll+On "><img  src="./img/caçamba-roll-on-JKI.jpg"><img src="./img/Caminhao-carroceria.jpg" alt="Imagem 4"></a>
+                </div>
+                <!--Slide Imagem-->
+
+                <!--Navigation Auto-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+            </div>
+
+            <div class="manual-navigation">
+
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+
+
+
+            </div>
+        </div>
+    </main>
+    <br><br>
+    <div class="container">
+        <div class="part part1">
+            <a href="serviços.html"><img src="./img/Caminhao-carroceria.jpg" class="img-1"></a>
+            <p>Agendamento de frete caminhão (Carroceria)</p>
+        </div>
+        <div class="part part2">
+            <a href="serviços.html"><img src="./img/Caminhao-roll-on.jpg" class="img-2"></a>
+            <p>Agendamento de frete caminhão (Roll On)</p>
+        </div>
+        <div class="part part3">
+            <a href="serviços.html"><img src="./img/caçamba-poli.png" class="img-3"></a>
+            <p>Caçamba fixa para retirada agendada(Poli)</p>
+        </div>
+        <div class="part part4">
+            <a href="serviços.html"><img src="./img/caçamba-roll-on-JKI.jpg" class="img-4"></a>
+            <p>Caçamba fixa para retirada agendada (Roll On)</p>
+        </div>
+
+    </div>
+    
+    <br>
+    <br>
+        <div class="rodapé">
+        <p class="nav-footer-secondaryinfo">CNPJ n.º 14.291.085/0001-19 / R. Salvador Gaeta, 462 - Vila Augusta,
+            Guarulhos - SP, CEP 07023-010 - Empresa de Reciclagem.</p>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+<script src="./JS/comando.js"></script>
+
+</html>
